@@ -3,8 +3,14 @@ name: Lab10-Comprehensive CI with Detailed Logging - Ubuntu
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab10/**'
+      - '.github/workflows/lab10-comprehensive-ci.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab10/**'
+      - '.github/workflows/lab10-comprehensive-ci.yml'
 
 jobs:
   comprehensive-ubuntu-ci:

@@ -3,8 +3,14 @@ name: Lab10-Modular CI/CD Pipeline - Ubuntu
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab10/**'
+      - '.github/workflows/lab10-modular-pipeline.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab10/**'
+      - '.github/workflows/lab10-modular-pipeline.yml'
   workflow_dispatch:
     inputs:
       environment:

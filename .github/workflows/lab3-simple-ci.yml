@@ -4,8 +4,14 @@ name: Lab3-Simple CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab3/**'
+      - '.github/workflows/lab3-simple-ci.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab3/**'
+      - '.github/workflows/lab3-simple-ci.yml'
 jobs:
   test:
     name: Test Application

@@ -3,8 +3,14 @@ name: Lab11-DevOps Capstone - Continuous Integration
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab11/**'
+      - '.github/workflows/lab11-ci.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab11/**'
+      - '.github/workflows/lab11-ci.yml'
   workflow_dispatch: {}
 
 env:

@@ -3,8 +3,14 @@ name: Lab6-Build and Deploy
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab6/**'
+      - '.github/workflows/lab6-deploy.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab6/**'
+      - '.github/workflows/lab6-deploy.yml'
   workflow_dispatch:
     inputs:
       environment:

@@ -3,8 +3,14 @@ name: Lab9-CI Pipeline with Security
 on:
   push:
     branches: [ main, develop ]
+    paths:
+      - 'lab9/**'
+      - '.github/workflows/lab9-ci.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab9/**'
+      - '.github/workflows/lab9-ci.yml'
 
 jobs:
   security-scan:

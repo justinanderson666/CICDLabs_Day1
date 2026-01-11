@@ -3,8 +3,14 @@ name: Lab10-Optimized CI with Advanced Caching - Ubuntu
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab10/**'
+      - '.github/workflows/lab10-optimized-ci.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab10/**'
+      - '.github/workflows/lab10-optimized-ci.yml'
 
 env:
   NODE_VERSION: '18'

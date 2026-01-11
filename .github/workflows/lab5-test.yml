@@ -3,8 +3,14 @@ name: Lab5-Run Tests
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'lab5/**'
+      - '.github/workflows/lab5-test.yml'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'lab5/**'
+      - '.github/workflows/lab5-test.yml'
 
 jobs:
   test:
