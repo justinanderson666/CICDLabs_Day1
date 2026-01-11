@@ -24,9 +24,6 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: lab3/simple-cicd-pipeline
     outputs:
       error: ${{ steps.set.outputs.error }}
       mode: ${{ steps.set.outputs.mode }}
@@ -77,6 +74,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: lab3/simple-cicd-pipeline/package-lock.json
 
       - name: Ensure deps
         run: npm ci || npm install
@@ -112,6 +110,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: lab3/simple-cicd-pipeline/package-lock.json
 
       - name: Ensure deps
         run: npm ci || npm install
